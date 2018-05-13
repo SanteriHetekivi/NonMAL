@@ -143,3 +143,4 @@ mongod
 backend/config/default.json
 config.js
 .vscode
+package-lock.json

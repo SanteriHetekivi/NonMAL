@@ -48,11 +48,11 @@ class Manga extends Component {
     this.receivedManga = null
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (this.receivedManga !== nextProps.manga) {
-      console.log(nextProps)
-      this.receivedManga = nextProps.manga
-      this.setManga(this.receivedManga)
+  componentDidUpdate (prevProps, prevState, snapshot) {
+    if (this.receivedManga !== this.props.manga) {
+      console.log(this.props.manga)
+      this.receivedManga = this.props.manga
+      this.setManga(this.props.manga)
     }
   }
 
